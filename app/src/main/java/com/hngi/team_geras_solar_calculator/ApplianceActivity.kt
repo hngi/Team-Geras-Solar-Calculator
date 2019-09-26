@@ -19,7 +19,7 @@ class ApplianceActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_appliance)
         supportActionBar?.title = "All Appliances"
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
 
 
@@ -37,18 +37,23 @@ class ApplianceActivity : AppCompatActivity() {
             adapter.addAppliance(appliance)
 
 
-
             Log.d("XXX", "$appliance")
         })
 
         button2.setOnClickListener {
             adapter.sumLoad()
-            total.text = adapter.total.toString()
+
+            total.text = "Total: " + adapter.total.toString() + " Watt(s)"
         }
 
         floatingActionButton.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, AddApplianceActivity::class.java)
             startActivity(intent)
         }
     }
+
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        onBackPressed()
+//        return super.onOptionsItemSelected(item)
+//    }
 }

@@ -7,6 +7,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:elevation="5dp"
 
     >
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -25,7 +26,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="#000"
             android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/addIcon"
+            app:layout_constraintEnd_toStartOf="@+id/subtractIcon"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,12 +39,12 @@
             app:layout_constraintTop_toBottomOf="@+id/appliance" />
 
         <ImageView
-            android:id="@+id/addIcon"
+            android:id="@+id/subtractIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
-            android:src="@drawable/ic_add_circle_outline_black_24dp"
+            android:src="@drawable/ic_remove_circle_outline_black_24dp"
             app:layout_constraintBottom_toBottomOf="@+id/qtyTv"
             app:layout_constraintEnd_toStartOf="@+id/qtyTv"
             app:layout_constraintTop_toTopOf="@+id/qtyTv" />
@@ -54,26 +55,27 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
-            app:layout_constraintBottom_toBottomOf="@+id/subIcon"
-            app:layout_constraintEnd_toStartOf="@+id/subIcon"
-            app:layout_constraintTop_toTopOf="@+id/subIcon" />
+            app:layout_constraintBottom_toBottomOf="@+id/additionIcon"
+            app:layout_constraintEnd_toStartOf="@+id/additionIcon"
+            app:layout_constraintTop_toTopOf="@+id/additionIcon" />
 
         <ImageView
             android:id="@+id/deleteIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_delete_black_24dp"
-            app:layout_constraintBottom_toBottomOf="@+id/subIcon"
+
+            app:layout_constraintBottom_toBottomOf="@+id/additionIcon"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/subIcon" />
+            app:layout_constraintTop_toTopOf="@+id/additionIcon" />
 
         <ImageView
-            android:id="@+id/subIcon"
+            android:id="@+id/additionIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="24dp"
-            android:layout_marginRight="24dp"
-            android:src="@drawable/ic_remove_circle_outline_black_24dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:src="@drawable/ic_add_circle_outline_black_24dp"
             app:layout_constraintBottom_toBottomOf="@+id/wattage"
             app:layout_constraintEnd_toStartOf="@+id/deleteIcon"
             app:layout_constraintTop_toTopOf="@+id/appliance"

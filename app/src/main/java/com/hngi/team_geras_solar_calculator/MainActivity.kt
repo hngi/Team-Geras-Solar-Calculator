@@ -13,17 +13,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-
-        button.setOnClickListener {
-            val appliance = editText.text.toString()
-            val wattage = editText2.text.toString().toInt()
-
-            val applianceDetails = ApplianceDetails(appliance,wattage,1)
-            ApplianceViewModel(application).insert(applianceDetails)
-
-//            val intent = Intent(this, ApplianceActivity::class.java)
-//            startActivity(intent)
-            finish()
-        }
     }
+
 }

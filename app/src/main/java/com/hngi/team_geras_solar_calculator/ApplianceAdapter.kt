@@ -26,15 +26,15 @@ class ApplianceAdapter : RecyclerView.Adapter<ApplianceAdapter.ViewHolder>() {
         val details = appliances[position]
 
         holder.applianceName.text =  details.applianceName
-        holder.applianceRating.text = details.applianceRating.toString() + " WATT(S)"
+        holder.applianceRating.text = details.applianceRating.toString() + " Watt(s)"
         holder.qtyTv.text = details.quantity.toString()
-        holder.addIcon.setOnClickListener {
+        holder.additionIcon.setOnClickListener {
             val newQty = (details.quantity)+1
             holder.qtyTv.text = newQty.toString()
             ApplianceViewModel(Application()).update(newQty,details.applianceName)
 
         }
-        holder.subIcon.setOnClickListener {
+        holder.subtractionIcon.setOnClickListener {
             if (details.quantity != 0) {
             val newQty = (details.quantity)-1
             holder.qtyTv.text = newQty.toString()
@@ -48,8 +48,8 @@ class ApplianceAdapter : RecyclerView.Adapter<ApplianceAdapter.ViewHolder>() {
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val applianceName:TextView = itemView.findViewById(R.id.appliance)
         val applianceRating: TextView = itemView.findViewById(R.id.wattage)
-        val subIcon : ImageView = itemView.findViewById(R.id.subIcon)
-        val addIcon : ImageView = itemView.findViewById(R.id.addIcon)
+        val additionIcon : ImageView = itemView.findViewById(R.id.additionIcon)
+        val subtractionIcon : ImageView = itemView.findViewById(R.id.subtractIcon)
         val deleteIcon : ImageView = itemView.findViewById(R.id.deleteIcon)
         val qtyTv : TextView = itemView.findViewById(R.id.qtyTv)
     }
