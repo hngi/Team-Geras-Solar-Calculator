@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="5dp"
+
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/appliance_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:paddingRight="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/appliance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Appliance"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#000"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/subtractIcon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/wattage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wattage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appliance" />
+
+        <ImageView
+            android:id="@+id/subtractIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/ic_remove_circle_outline_black_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/qtyTv"
+            app:layout_constraintEnd_toStartOf="@+id/qtyTv"
+            app:layout_constraintTop_toTopOf="@+id/qtyTv" />
+
+        <TextView
+            android:id="@+id/qtyTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/additionIcon"
+            app:layout_constraintEnd_toStartOf="@+id/additionIcon"
+            app:layout_constraintTop_toTopOf="@+id/additionIcon" />
+
+        <ImageView
+            android:id="@+id/deleteIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_delete_black_24dp"
+
+            app:layout_constraintBottom_toBottomOf="@+id/additionIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/additionIcon" />
+
+        <ImageView
+            android:id="@+id/additionIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:src="@drawable/ic_add_circle_outline_black_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/wattage"
+            app:layout_constraintEnd_toStartOf="@+id/deleteIcon"
+            app:layout_constraintTop_toTopOf="@+id/appliance"
+            app:layout_constraintVertical_bias="0.526" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+
