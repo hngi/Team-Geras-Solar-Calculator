@@ -4,5 +4,5 @@
 
 # To get started 
 
-<p> Download and install the app</p>
+<p> Download(https://drive.google.com/file/d/10bGUW65de_QiHFM9-drRtg9FyFUCdnXT/view) and install the app </p>
 <p>In the next screen, input the electronic and the wattage you wish to check then hit the "Calculate" button and see the magic</p>
