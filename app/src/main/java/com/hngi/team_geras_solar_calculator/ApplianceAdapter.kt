@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.widget.addTextChangedListener
 import androidx.recyclerview.widget.RecyclerView
 
 class ApplianceAdapter : RecyclerView.Adapter<ApplianceAdapter.ViewHolder>() {
@@ -40,6 +41,12 @@ class ApplianceAdapter : RecyclerView.Adapter<ApplianceAdapter.ViewHolder>() {
             holder.qtyTv.text = newQty.toString()
             ApplianceViewModel(Application()).update(newQty,details.applianceName)
         }}
+
+//        holder.qtyTv.addTextChangedListener(){
+//            text ->
+//
+//        }
+
         holder.deleteIcon.setOnClickListener {
             ApplianceViewModel(Application()).delete(details)
         }
