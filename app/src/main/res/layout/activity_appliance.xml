@@ -70,4 +70,6 @@
         app:layout_constraintEnd_toStartOf="@+id/floatingActionButton"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <include layout="@layout/result_page"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
