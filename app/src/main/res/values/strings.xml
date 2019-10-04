@@ -4,13 +4,13 @@
     <string name="app_use">This App was developed to help estimate the minimum solar power requirement for your home or office. It is very simple and easy to use.</string>
     <string name="version">Solar Calculator v1.1</string>
     <string name="get_started">To get started with Solar Calculator, follow the following instructions:</string>
-    <string name="first_instruction">1. Click on the greater than button ">". This will open the page where appliances can be added.</string>
-    <string name="second_instruction">2. To add appliances click on the floating "+" button. This will open a page where one can input the name of the appliance and
+    <string name="first_instruction">1. Click on the greater than button \">\". This will open the page where appliances can be added.</string>
+    <string name="second_instruction">2. To add appliances click on the floating \"+\" button. This will open a page where one can input the name of the appliance and
         the power rating.</string>
-    <string name="third_instruction">3. Enter the name of the appliance in the provided text field. Appliances may include ceiling fan, television, radio, blender, laptop, iron, standing fan, microwave, refrigerator, deep freezer,
-        vacuum cleaner and other home appliances.</string>
-    <string name="fourth_instruction">4. Enter the <b>power rating</b> of the appliance. The power rating is a quantity that describes the total electrical power required for normal operation of an electric appliance.
+    <string name="third_instruction">3. Enter the name of the appliance in the provided text field or pick from the list of appliances given. Other appliances include ceiling fan, radio, blender, laptop, iron, standing fan, microwave, refrigerator, deep freezer,
+        vacuum cleaner etc.</string>
+    <string name="fourth_instruction">4. Enter the <b>Power Rating</b> of the appliance or go with the suggested value. The power rating is a quantity that describes the total electrical power required for normal operation of an electric appliance.
         This is listed as part of the name plate data attached to the appliance. The power rating is expressed in either Watts(W) or Kilowatts(KW). </string>
-    <string name="fifth_instruction">5. Click the "save appliance" button to save the details entered in the text fields.</string>
-    <string name="sixth_instruction">6. Save as many appliance as required and then click the "calculate" button to display the final results. </string>
+    <string name="fifth_instruction">5. Click the \"save appliance\" button to save the details entered in the text fields.</string>
+    <string name="sixth_instruction">6. Save as many appliance as required and then click the "calculate" button to display the final results.</string>
 </resources>
