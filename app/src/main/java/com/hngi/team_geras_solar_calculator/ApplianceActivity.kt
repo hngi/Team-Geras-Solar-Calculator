@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -34,6 +35,7 @@ class ApplianceActivity : AppCompatActivity() {
             .observe(this, Observer { appliance ->
 
                 adapter.addAppliance(appliance)
+             //   val number = appliance.size
 
 
                 Log.d("XXX", "$appliance")
@@ -43,15 +45,24 @@ class ApplianceActivity : AppCompatActivity() {
 
         button2.setOnClickListener {
 
+
+
+
             adapter.sumLoad()
+
+            if (adapter.total == 0) {
+                Toast.makeText(this, "Please Add an Appliance", Toast.LENGTH_LONG).show()
+            }
 //            total.text =
 //                "Total Load : " + adapter.total.toString() + " Watt(s)\nYou will need a solar power system that supplies above this load to run your home or office"
-
-            resultLayout.visibility = View.VISIBLE
-            supportActionBar?.hide()
-            button2.visibility = View.GONE
-            resultTextView.text =  "Total Load : " + adapter.total.toString() + " Watt(s)\n\nYou will need a solar power system that supplies above this load to run your home or office"
-
+            else {
+                floatingActionButton.visibility = View.GONE
+                resultLayout.visibility = View.VISIBLE
+                supportActionBar?.hide()
+                button2.visibility = View.GONE
+                resultTextView.text =
+                    "Total Load : " + adapter.total.toString() + " Watt(s)\n\nYou will need a solar power system that supplies above this load to run your home or office"
+            }
 
         }
 
@@ -68,6 +79,7 @@ class ApplianceActivity : AppCompatActivity() {
             resultLayout.visibility = View.GONE
             button2.visibility = View.VISIBLE
             supportActionBar?.show()
+            floatingActionButton.visibility = View.VISIBLE
         }
         else
         super.onBackPressed()
