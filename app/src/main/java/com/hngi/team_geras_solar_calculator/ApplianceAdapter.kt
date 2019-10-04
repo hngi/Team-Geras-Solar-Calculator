@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.widget.addTextChangedListener
 import androidx.recyclerview.widget.RecyclerView
 
 class ApplianceAdapter : RecyclerView.Adapter<ApplianceAdapter.ViewHolder>() {
@@ -36,7 +35,7 @@ class ApplianceAdapter : RecyclerView.Adapter<ApplianceAdapter.ViewHolder>() {
 
         }
         holder.subtractionIcon.setOnClickListener {
-            if (details.quantity != 0) {
+            if (details.quantity != 1) {
             val newQty = (details.quantity)-1
             holder.qtyTv.text = newQty.toString()
             ApplianceViewModel(Application()).update(newQty,details.applianceName)
